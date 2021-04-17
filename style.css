@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+:root {
+  --primary-color: #086972;
+  --secandary-color: #071a52;
+  --third-color: #17b978;
+  --fourth-color: #a7ff83;
+}
+
+body,
+html {
+  font-family: "Montserrat";
+  margin: 0;
+  /* text-align: center; */
+}
+
+a {
+  /* to get rid of the underline */
+  text-decoration: none;
+}
+
+.topbar {
+  /* to get the logo and nav icon away from edges */
+  padding: 1em;
+  background-color: var(--primary-color);
+  /* width: calc(100% - 2em); */
+  /* height: calc(100vh - 2em); */
+}
+
+.topbar .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.topbar .menu-btn {
+  width: 30px;
+  float: right;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+section {
+  padding: 4em;
+}
+
+section h1 {
+  font-size: 2em;
+  /* top bottom margin 1em and regh left auto */
+  margin: 1em auto;
+  /* to make it in centre  */
+  width: 80%;
+}
+
+section p {
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  /* top bottom margin 1em and regh left auto */
+}
+
+section h1::after {
+  content: "";
+  border-top: 5px solid lightgray;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  /* to make stay on top of all other elements */
+  position: relative;
+  background: var(--third-color);
+  /* to push away from edges */
+  padding: 2em;
+  /* to make nav 100% but to not add scroll bars subtract the padding points */
+  width: calc(100% - 4em);
+  height: calc(100vh - 4em);
+  /* to initially mke nav disapper */
+  display: none;
+  float: right;
+
+  /* to make it initially at 0 */
+  transform: scaleX(0);
+  /* transform-origin: right; */
+  transform-origin: right;
+  /* remove in smaller size */
+  /* border-bottom-left-radius: 500px; */
+}
+
+nav .close-btn {
+  width: 18px;
+  float: right;
+  cursor: pointer;
+  /* to make it initially invisible */
+  opacity: 0;
+}
+
+nav ul {
+  /* to get rid of bullets */
+  list-style-type: none;
+  margin: 20% auto 0 auto;
+  padding: 0;
+  /* to add the tabs in grid form */
+  /* display: grid; */
+  /* to divide 4 eqaul parts for all four tabs */
+  grid-template-columns: repeat(4, 25%);
+  width: 80%;
+  /* to make it initially invisible */
+}
+
+nav ul li {
+  opacity: 0;
+}
+
+nav ul a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+nav ul span {
+  color: black;
+  /* to move then to a seperate line */
+  display: block;
+  font-size: 0.75em;
+  /* to make some space between the a and span */
+  margin-top: 20px;
+}
+
+nav li {
+  padding: 0.5em;
+  text-align: center;
+}
+
+nav li:hover {
+  background-color: var(--primary-color);
+  /* background-color: white; */
+  padding: 1.5em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, color 0.2s 0.3s;
+  cursor: pointer;
+  border-radius: 30px;
+  /* font-weight: bold; */
+}
+
+/* attached to open button */
+.show-menu {
+  display: block;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: slide-menu 1s ease-in forwards;
+}
+
+.show-menu .close-btn {
+  /* for 1s with 1s delay */
+  animation: show-x 1s 1s forwards;
+}
+
+/* to get 1st li */
+.show-menu li:nth-child(1) {
+  animation: menu-item-anim 0.6s forwards 1s ease-in-out;
+}
+
+.show-menu li:nth-child(2) {
+  animation: menu-item-anim 0.6s forwards 1.6s ease-in-out;
+}
+
+.show-menu li:nth-child(3) {
+  animation: menu-item-anim 0.6s forwards 2.2s ease-in-out;
+}
+
+.show-menu li:nth-child(4) {
+  animation: menu-item-anim 0.6s forwards 2.8s ease-in-out;
+}
+/* 
+.show-menu li:nth-child(5) {
+  animation: menu-item-anim 0.6s forwards 3.4s ease-in-out;
+} */
+
+section {
+  color: white;
+}
+.details {
+  text-align: center;
+}
+.hero-content {
+  text-align: center;
+}
+.user {
+  /* position: unset; */
+  border-radius: 50%;
+  border: 0.5em solid var(--third-color);
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  margin-top: -3em;
+  width: 70%;
+}
+
+.project-button {
+  background-color: var(--third-color);
+  color: white;
+  text-align: center;
+  margin: 1em;
+  padding: 1em 2.5em;
+  width: fit-content;
+  /* display: block;*/
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  display: flex;
+}
+
+.project-button:hover,
+.contactMe .c_btn:hover {
+  color: var(--primary-color);
+  background-color: white;
+  padding: 1em 3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, color 0.2s 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.skill-set {
+  color: var(--primary-color);
+}
+
+.skill-set li {
+  background: rgb(214, 208, 208);
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  /* atuo on left right will keep it cenntered */
+  margin: 0 auto 1em auto;
+  /* to make edges round  */
+  border-radius: 1em;
+}
+
+i {
+  color: var(--third-color);
+  font-size: 80px;
+}
+
+.skill-list li {
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: contents;
+}
+
+.Projects {
+  color: var(--primary-color);
+}
+
+@keyframes menu-item-anim {
+  from {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* defining type of animation named in above class*/
+@keyframes slide-menu {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .user {
+    width: auto;
+    margin-top: -5em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .skill-set ul {
+    display: flex;
+  }
+
+  .skill-set ul li {
+    margin: 0 1em;
+  }
+  .skill-list {
+    /* */
+    /* text-align: center; */
+    /* margin: auto 1em; */
+    padding: revert;
+  }
+
+  #sl1 {
+    margin-left: 15%;
+  }
+}
+
+.Projects {
+  text-align: center;
+}
+
+.Projects h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+  /* to add spacing between the letters */
+  letter-spacing: 0.4em;
+  font-size: 2em;
+  /* distance between lines */
+  line-height: 1em;
+  margin-top: 0.2em;
+}
+
+.Projects ul span {
+  font-weight: bold;
+}
+
+.Projects .P_buttons a {
+  background: var(--third-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.4em 1em;
+  margin-top: 1em;
+  font-size: 1.4em;
+  /* to make round corners */
+  border-radius: 5em;
+  /* font-weight: bold; */
+  display: inline-block;
+}
+
+.Projects .Project-image-r,
+.Projects .Project-image-l {
+  width: 70%;
+  margin-top: 3em;
+}
+
+.Projects .P_buttons a:hover {
+  color: var(--third-color);
+  border: 2px solid var(--third-color);
+  background-color: white;
+  padding: 0.5em 1.5em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, color 0.2s 0.3s;
+  cursor: pointer;
+  /* font-weight: bold; */
+}
+
+.Projects ul {
+  text-align: left;
+  margin-left: 20%;
+  list-style-type: square;
+}
+
+.Projects ul li {
+  margin-left: 2em;
+}
+
+.contactMe {
+  background-color: var(--third-color);
+}
+
+.contactMe h2 {
+  text-align: center;
+}
+
+.contactMe p {
+  text-align: left;
+  font-weight: lighter;
+  margin-bottom: 3em;
+}
+
+.contactMe .c_btn {
+  background-color: var(--primary-color);
+  padding: 1em 2em;
+  color: white;
+  border-radius: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  nav {
+    width: calc(40% - 4em);
+    height: calc(100vh - 4em);
+    /* to initially mke nav disapper */
+    display: none;
+    float: right;
+
+    /* to make it initially at 0 */
+    transform: scaleX(0);
+    /* transform-origin: right; */
+    transform-origin: right;
+    border-bottom-left-radius: 500px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  /* .container {
+    width: 1000px;
+    margin: 0 auto;
+  } */
+
+  /* section .skill-set {
+    padding: 5em 1em;
+  } */
+
+  section {
+    padding: 5em;
+    /* padding-top: 1em;
+    padding-bottom: 1em;
+  } */
+  }
+  .Projects .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 2em;
+  }
+
+  .Projects .container .right-col {
+    margin-left: 2em;
+  }
+
+  .Projects .Project-image-r {
+    margin-left: 4em;
+  }
+
+  .Projects .container .left-col,
+  .Projects .Project-image-l {
+    margin-left: 2em;
+    width: 45%;
+  }
+
+  .Projects .container .left-col h3,
+  .Projects .container .right-col h3 {
+    font: 1em;
+    /* width: 90%; */
+  }
+
+  .Projects .Project-image-r,
+  .Projects .Project-image-l {
+    width: 45%;
+    margin-top: -0.5em;
+    /* margin-right: 1em; */
+  }
+
+  .Projects ul {
+    margin: auto;
+  }
+}
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background-color: #ddd;
+  color: #555;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+#back2Top:hover {
+  background-color: #ddf;
+  color: #000;
+}
+
+footer {
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 3em;
+}
+
+footer .name_logo {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
