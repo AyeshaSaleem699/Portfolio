@@ -292,6 +292,18 @@ i {
     width: auto;
     margin-top: -5em;
   }
+  
+  .Projects h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+    /* to add spacing between the letters */
+    letter-spacing: 0.4em;
+    font-size: 2em;
+    /* distance between lines */
+    line-height: 1em;
+    margin-top: 0.2em;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -316,18 +328,6 @@ i {
 
 .Projects {
   text-align: center;
-}
-
-.Projects h3 {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--primary-color);
-  /* to add spacing between the letters */
-  letter-spacing: 0.4em;
-  font-size: 2em;
-  /* distance between lines */
-  line-height: 1em;
-  margin-top: 0.2em;
 }
 
 .Projects ul span {
