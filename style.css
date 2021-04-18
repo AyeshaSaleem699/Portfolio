@@ -314,15 +314,11 @@ i {
   .skill-set ul li {
     margin: 0 1em;
   }
-  .skill-list {
-    /* */
-    /* text-align: center; */
-    /* margin: auto 1em; */
-    padding: revert;
+  ul.skill-list {
+    display: block;
   }
-
-  #sl1 {
-    margin-left: 15%;
+  ul.skill-list li {
+    text-align: center;
   }
 }
 
