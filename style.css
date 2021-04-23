@@ -540,3 +540,17 @@ footer .name_logo {
 .Projects img:hover {
   width: 50%;
 }
+
+.about {
+  color: var(--primary-color);
+  padding-bottom: 0;
+}
+
+.about p {
+  font-weight: normal;
+}
+
+.about .sub-head {
+  color: var(--third-color);
+  font-weight: bold;
+}
