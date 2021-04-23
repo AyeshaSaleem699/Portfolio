@@ -22,7 +22,8 @@ a {
 .topbar {
   /* to get the logo and nav icon away from edges */
   padding: 1em;
-  background-color: var(--primary-color);
+/*   background-color: var(--primary-color); */
+  background: url(images/background.jpg);
   /* width: calc(100% - 2em); */
   /* height: calc(100vh - 2em); */
 }
@@ -197,7 +198,7 @@ section {
 .user {
   /* position: unset; */
   border-radius: 50%;
-  border: 0.5em solid var(--third-color);
+  border: 0.4em solid var(--primary-color);
   /* display: block;
   margin-left: auto;
   margin-right: auto; */
