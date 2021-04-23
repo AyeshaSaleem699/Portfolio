@@ -244,6 +244,16 @@ section {
   margin: 0 auto 1em auto;
   /* to make edges round  */
   border-radius: 1em;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  box-shadow: 1em 1em var(--third-color);
+}
+
+.skill-set li:hover {
+  box-shadow: var(--box-shadow);
+  box-shadow: 1em 1em 1em var(--third-color);
+  /* border: 0.1em solid var(--third-color); */
+  transform: scale(1.1);
 }
 
 i {
@@ -512,11 +522,21 @@ footer .name_logo {
     padding: 2em 4em;
   }
   section {
-    width: 1100px;
+    width: 1000px;
     margin: 0 auto;
   }
 
   .right-col {
     margin-top: 2em;
   }
+}
+
+.Projects img {
+  /* width: 210%; */
+  transition: 0.4s ease-in;
+  cursor: pointer;
+}
+
+.Projects img:hover {
+  width: 50%;
 }
