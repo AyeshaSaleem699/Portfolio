@@ -198,7 +198,7 @@ section {
 .user {
   /* position: unset; */
   border-radius: 50%;
-  border: 0.4em solid var(--primary-color);
+  border: 0.2em double var(--primary-color);
   /* display: block;
   margin-left: auto;
   margin-right: auto; */
