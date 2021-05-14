@@ -271,7 +271,7 @@ nav li:hover {
 
 .row {
   margin: auto;
-  display: flex;
+  /* display: flex; */
   /* flex-grow: 1; */
 }
 
@@ -282,33 +282,35 @@ nav li:hover {
 }
 
 .column {
-  float: right;
-  width: 50%;
+  /* float: right; */
+  display: block;
+  width: 100%;
 }
 
 .card {
+  /* width: 100%; */
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 2em;
   text-align: center;
-  background-color: #f1f1f1;
-  transform: scale(1);
+  /*background-color: #f1f1f1;
+   transform: scale(1);
   transform-origin: 50% 50%;
-  transition: transform 0.25s;
+  transition: transform 0.25s; */
 }
 
-.card:hover:before {
+/* .card:hover:before {
   transform: scale(21);
-}
+} */
 
-.card:hover {
+/* .card:hover {
   transition: all 0.4s ease-out;
   margin: 1.5em;
   cursor: pointer;
-}
+} */
 
 .card img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -330,6 +332,10 @@ nav li:hover {
     margin-bottom: 20px;
   }
   .row {
+    display: block;
+  }
+
+  .card {
     display: block;
   }
 }
@@ -354,11 +360,11 @@ section.skill-set {
   box-shadow: 0.5em 0.5em var(--secandry-color);
 }
 
-.skill-set li:hover {
+/* .skill-set li:hover {
   box-shadow: var(--box-shadow);
   box-shadow: 0.5em 0.5em 0.5em var(--secandry-color);
   transform: scale(1.1);
-}
+} */
 
 .skill-list li {
   padding: 0;
