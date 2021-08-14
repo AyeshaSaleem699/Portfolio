@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+:root {
+  --primary-color: #086972;
+  --secandry-color: #17b978;
+}
+
+body,
+html {
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 2em;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  color: var(--secandry-color);
+  font-size: 80px;
+}
+
+section h1 {
+  font-size: 2em;
+  margin: 1em auto;
+  width: 80%;
+}
+
+section p {
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+section h1::after {
+  content: "";
+  border-top: 5px solid lightgray;
+  display: block;
+}
+
+.topbar {
+  padding: 1em;
+  background: url(images/bgnew.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: right;
+  margin-top: 5px;
+}
+
+.topbar h2 {
+  font-size: 2em;
+}
+
+#typewriter {
+  font-size: 1.25em;
+}
+
+.topbar h2,
+#typewriter {
+  color: var(--primary-color);
+}
+
+.project-button {
+  background-color: var(--secandry-color);
+  color: white;
+  text-align: center;
+  margin: 1em;
+  padding: 1em 2.5em;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  display: flex;
+}
+
+.topbar .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.topbar .menu-btn {
+  width: 30px;
+  float: right;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.hero-content {
+  background-color: rgb(211, 211, 211, 0.3);
+  width: 70%;
+  height: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.details {
+  text-align: center;
+}
+
+nav {
+  position: relative;
+  background: var(--secandry-color);
+  padding: 2em;
+  width: calc(100% - 4em);
+  height: calc(100vh - 4em);
+  display: none;
+  float: right;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+nav .close-btn {
+  width: 18px;
+  float: right;
+  cursor: pointer;
+  opacity: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 20% auto 0 auto;
+  padding: 0;
+  grid-template-columns: repeat(4, 25%);
+  width: 80%;
+}
+
+nav ul li {
+  opacity: 0;
+}
+
+nav ul a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+nav ul span {
+  color: black;
+  display: block;
+  font-size: 0.75em;
+  margin-top: 20px;
+}
+
+nav li {
+  padding: 0.5em;
+  text-align: center;
+}
+
+nav li:hover {
+  background-color: var(--primary-color);
+  padding: 1.5em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, color 0.2s 0.3s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+/* attached to open button */
+.show-menu {
+  display: block;
+  animation: slide-menu 1s ease-in forwards;
+}
+
+.show-menu .close-btn {
+  animation: show-x 1s 1s forwards;
+}
+
+.show-menu li:nth-child(1) {
+  animation: menu-item-anim 0.6s forwards 1s ease-in-out;
+}
+
+.show-menu li:nth-child(2) {
+  animation: menu-item-anim 0.6s forwards 1.6s ease-in-out;
+}
+
+.show-menu li:nth-child(3) {
+  animation: menu-item-anim 0.6s forwards 2.2s ease-in-out;
+}
+
+.show-menu li:nth-child(4) {
+  animation: menu-item-anim 0.6s forwards 2.8s ease-in-out;
+}
+
+@keyframes menu-item-anim {
+  from {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about {
+  color: var(--primary-color);
+  padding-bottom: 0;
+}
+
+.about p {
+  font-weight: normal;
+}
+
+.about .sub-head {
+  color: var(--secandry-color);
+  font-weight: bold;
+}
+
+.about .container p {
+  padding-left: 5em;
+  text-align: left;
+  padding-right: 5em;
+}
+
+#projects {
+  color: var(--primary-color);
+}
+
+#projects .content .P_buttons a {
+  background: var(--secandry-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.4em 1em;
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  border-radius: 5em;
+  display: block;
+  width: fit-content;
+}
+
+#projects .content .P_buttons a:hover {
+  color: var(--secandry-color);
+  border: 2px solid var(--secandry-color);
+  background-color: white;
+  padding: 0.5em 1.5em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, color 0.2s 0.3s;
+  cursor: pointer;
+}
+
+.row {
+  margin: auto;
+  /* display: flex; */
+  /* flex-grow: 1; */
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  /* float: right; */
+  display: block;
+  width: 100%;
+}
+
+.card {
+  /* width: 100%; */
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 2em;
+  text-align: center;
+  /*background-color: #f1f1f1;
+   transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s; */
+}
+
+/* .card:hover:before {
+  transform: scale(21);
+} */
+
+/* .card:hover {
+  transition: all 0.4s ease-out;
+  margin: 1.5em;
+  cursor: pointer;
+} */
+
+.card img {
+  max-width: 50%;
+  height: auto;
+}
+
+.card ul {
+  text-align: left;
+  margin-left: 20%;
+  list-style-type: square;
+}
+
+.card ul span {
+  text-align: left;
+  margin-left: -2.5em;
+}
+
+@media screen and (max-width: 700px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row {
+    display: block;
+  }
+
+  .card {
+    display: block;
+  }
+}
+
+.skill-set {
+  color: var(--primary-color);
+}
+
+section.skill-set {
+  padding-top: 0em;
+}
+
+.skill-set li {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 1em auto;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  box-shadow: 0.5em 0.5em var(--secandry-color);
+}
+
+/* .skill-set li:hover {
+  box-shadow: var(--box-shadow);
+  box-shadow: 0.5em 0.5em 0.5em var(--secandry-color);
+  transform: scale(1.1);
+} */
+
+.skill-list li {
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: contents;
+}
+
+.contactMe {
+  background-color: var(--secandry-color);
+}
+
+.contactMe h2 {
+  text-align: center;
+}
+
+.contactMe p {
+  text-align: left;
+  font-weight: lighter;
+  margin-bottom: 3em;
+}
+
+.contactMe .c_btn {
+  background-color: var(--primary-color);
+  padding: 1em 2em;
+  color: white;
+  border-radius: 50px;
+}
+
+.project-button:hover,
+.contactMe .c_btn:hover {
+  color: var(--primary-color);
+  background-color: white;
+  padding: 1em 3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, color 0.2s 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 3em;
+}
+
+footer .name_logo {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background-color: #ddd;
+  color: #555;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+#back2Top:hover {
+  background-color: #ddf;
+  color: #000;
+}
+
+@media only screen and (min-width: 600px) {
+  nav {
+    width: calc(40% - 4em);
+    height: calc(100vh - 4em);
+    display: none;
+    float: right;
+    transform: scaleX(0);
+    transform-origin: right;
+    border-bottom-left-radius: 500px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .hero-content {
+    background-color: rgb(211, 211, 211, 0);
+    width: 40%;
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  section {
+    padding: 5em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .skill-set ul {
+    display: flex;
+  }
+
+  .skill-set ul li {
+    margin: 0 1em;
+  }
+  ul.skill-list {
+    display: block;
+  }
+  ul.skill-list li {
+    text-align: center;
+  }
+
+  .hero-content {
+    height: calc(100vh - 3em);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    padding: 2em 4em;
+  }
+  section {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  .right-col {
+    margin-top: 2em;
+  }
+}
